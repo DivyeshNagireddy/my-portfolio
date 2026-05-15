@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nagireddy Sai Divyesh | Portfolio</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <h1>Nagireddy Sai Divyesh</h1>
+        <p>Electronics and Communication Engineering | Amrita Vishwa Vidyapeetham, Coimbatore</p>
+        <div class="contact-links">
+            <a href="mailto:divyeshnagireddy@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/divyesh-nagireddy-084a6131b/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/DivyeshNagireddy" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="info-card">
+                <h3>B.Tech in Electronics and Communication Engineering</h3>
+                <p><strong>Amrita School of Engineering, Coimbatore</strong> | July 2024 – Present</p>
+            </div>
+            <div class="info-card">
+                <h3>Higher Secondary Education (XII)</h3>
+                <p><strong>Tirumala Junior College, Visakhapatnam</strong> | 2022 - 2024</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="info-card">
+                <h3>WCS Intern | RINL Steel Plant</h3>
+                <p><strong>Visakhapatnam</strong> | April 2026 – May 2026</p>
+                <ul>
+                    <li>Project on STUDY OF WIRELESS COMMUNICATION SYSTEMS in RINL under Telecommunication Department.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Embedded C</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Hardware Platforms</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">Microcontrollers</span>
+                        <span class="skill-tag">ESP32</span>
+                        <span class="skill-tag">Arduino Uno</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">PCB Design</span>
+                        <span class="skill-tag">ARM LPC2148</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Software</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">LTSpice</span>
+                        <span class="skill-tag">Keil uVision4</span>
+                        <span class="skill-tag">Arduino IDE</span>
+                        <span class="skill-tag">Jupyter Notebook</span>
+                        <span class="skill-tag">Spyder IDE</span>
+                        <span class="skill-tag">TinkerCAD</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+    <h2>Projects</h2>
+    
+    <div class="project-item">
+        <button class="project-btn">
+            ESP32 Driven Remote Control Car
+            <span class="plus-icon">+</span>
+        </button>
+        <div class="project-content">
+            <div class="content-inner">
+                <p><strong>System Architecture:</strong> Engineered a high-torque robotic vehicle powered by an ESP32 microcontroller, utilizing its dual-core processing capabilities to handle real-time motor control and wireless data streams simultaneously.</p>
+                <p><strong>Hardware Integration:</strong> Interfaced L298N H-Bridge motor drivers to manage high-current DC motors, ensuring smooth pulse-width modulation (PWM) for precise speed and directional control.</p>
+                <p><strong>Wireless Communication:</strong> Established a robust low-latency control link using ESP-32 Microcontroller, developing a custom communication protocol to translate mobile application inputs into hardware execution.</p>
+                <p><strong>Firmware Development:</strong> Optimized embedded C++ code within the Arduino IDE, implementing interrupt-driven logic for immediate response times and efficient power management.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-item">
+        <button class="project-btn">
+            Audio Segregation using Signal Processing
+            <span class="plus-icon">+</span>
+        </button>
+        <div class="project-content">
+            <div class="content-inner">
+                <p><strong>System Objective:</strong> Developed a systematic pipeline to isolate overlapping male and female vocal tracks from a single-channel mixture audio file.</p>
+                <p><strong>Spectral Analysis:</strong> Utilized Short-Time Fourier Transform (STFT) and windowing techniques to analyze quasi-stationary audio frames in the frequency domain.</p>
+                <p><strong>Pitch Estimation:</strong> Implemented the librosa.pyin algorithm to track fundamental frequencies, classifying signals into gender-specific ranges (Male: 85–180 Hz, Female: 165–255 Hz).</p>
+                <p><strong>Harmonic Masking:</strong> Engineered a Soft Masking approach using Gaussian masks around detected harmonics to isolate target frequencies while suppressing cross-speaker interference.</p>
+                <p><strong>Signal Reconstruction:</strong> Reconstructed high-fidelity time-domain audio from processed frequency frames using the Inverse FFT (IFFT) and the Overlap-Add (OLA) method.</p>
+                <p><strong>Validation:</strong> Verified separation efficiency through SNR evaluation and comparative visualization of spectrograms and waveforms.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+        <section id="certifications">
+            <h2>Certificates</h2>
+            <ul class="cert-list">
+                <li><strong>Advanced & Core Python</strong> – Datapro, Visakhapatnam</li>
+                <li><strong>Quantum Fundamentals Program</strong> – Amaravati Quantum Valley, Qubitech, and WISER</li>
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
