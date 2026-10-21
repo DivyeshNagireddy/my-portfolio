@@ -21,6 +21,31 @@
     </header>
 
     <main>
+        <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="info-card about-card">
+            <p>
+                I am a Pre-Final year Student pursuing Electronics and Communication Engineering
+                at Amrita Vishwa Vidyapeetham, Coimbatore, with a
+                strong interest in VLSI design, digital electronics, Embedded systems and
+                hardware development.
+            </p>
+
+            <p>
+                I work with Verilog HDL, FPGA development tools, circuit
+                simulation platforms, and embedded systems. My project
+                experience includes digital signal generation, signal
+                processing, and sensor-based robotic automation.
+            </p>
+
+            <p>
+                I am continuously strengthening my fundamentals in RTL
+                design, CMOS circuits, and digital system verification,
+                with the goal of pursuing a career as a VLSI Design Engineer.
+            </p>
+        </div>
+    </section>
         <section id="education">
             <h2>Education</h2>
             <div class="info-card">
@@ -116,12 +141,43 @@
             </div>
         </div>
     </div>
+
+    <div class="project-item">
+    <button class="project-btn">
+        FPGA-Based Digital Signal Generator
+        <span class="plus-icon">+</span>
+    </button>
+    <div class="project-content">
+        <div class="content-inner">
+            <p><strong>System Architecture:</strong> Designed an FPGA-based digital signal generator using Verilog HDL to generate multiple waveforms, including sine, square, sawtooth, and triangular signals, with configurable frequency and amplitude.</p>
+            <p><strong>Digital Signal Generation:</strong> Implemented a Direct Digital Synthesis (DDS) architecture using a phase accumulator and waveform generation logic to produce periodic digital signals with precise frequency control.</p>
+            <p><strong>Simulation and Validation:</strong> Developed and verified the design using AMD Vivado and ModelSim, analyzing simulation waveforms to validate signal generation and functional correctness.</p>
+            <p><strong>Hardware Integration:</strong> Interfaced two potentiometers through the Basys 3 board's JXADC pins for real-time frequency and amplitude control. Utilized onboard switches to select waveform type, adjust the DC offset, and configure the frequency range.</p>
+        </div>
+    </div>
+</div>
+
+<div class="project-item">
+    <button class="project-btn">
+        Conveyor-Based Robotic Pick-and-Place System
+        <span class="plus-icon">+</span>
+    </button>
+    <div class="project-content">
+        <div class="content-inner">
+            <p><strong>System Architecture:</strong> Developed a conveyor-integrated robotic pick-and-place system using an STM32 microcontroller to automate object detection, positioning, pickup, and placement.</p>
+            <p><strong>Sensor Integration:</strong> Integrated HC-SR04 ultrasonic sensors at the conveyor entrance and pickup position to detect incoming objects and identify when they reach the robotic arm's working area.</p>
+            <p><strong>Motion Control:</strong> Implemented coordinated control of the conveyor and robotic arm, automatically stopping the conveyor when an object reaches the pickup position and executing the pick-and-place sequence before restarting the conveyor.</p>
+            <p><strong>System Validation:</strong> Tested the control sequence through simulation and serial monitoring, analyzing sensor readings and joint-angle-versus-time plots to evaluate object detection, arm movement, and overall system operation.</p>
+        </div>
+    </div>
+</div>
     </section>
         <section id="certifications">
             <h2>Certificates</h2>
             <ul class="cert-list">
                 <li><strong>Advanced & Core Python</strong> – Datapro, Visakhapatnam</li>
                 <li><strong>Quantum Fundamentals Program</strong> – Amaravati Quantum Valley, Qubitech, and WISER</li>
+                <li><strong>Introduction to IoT</strong> – SimpliLearn | SkillUp</li>
             </ul>
         </section>
     </main>
