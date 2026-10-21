@@ -209,16 +209,20 @@ strong {
 }
 
 
-/* Slide Down Project Description */
+
+/* Project Description - Original Theme Preserved */
 .project-content {
+    display: block;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    visibility: hidden;
+    transition: max-height 0.5s ease, visibility 0.5s ease;
 }
 
 .project-content.active {
-    max-height: 2000px;
+    visibility: visible;
 }
+
 
 
 .content-inner {
