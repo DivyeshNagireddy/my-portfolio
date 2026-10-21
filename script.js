@@ -1,43 +1,21 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const projectButtons = document.querySelectorAll('.project-btn');
+    const buttons = document.querySelectorAll('.project-btn');
 
-    projectButtons.forEach((button) => {
-        const content = button.nextElementSibling;
-        const icon = button.querySelector('.plus-icon');
-
-        if (!content || !icon) {
-            return;
-        }
-
-        // Start with every project collapsed.
-        content.classList.remove('active');
-        content.style.maxHeight = '0px';
-        button.setAttribute('aria-expanded', 'false');
-        icon.textContent = '+';
-
+    buttons.forEach(button => {
         button.addEventListener('click', () => {
-            const isOpen =
-                button.getAttribute('aria-expanded') === 'true';
+            // Find the content div immediately after the button
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.plus-icon');
 
-            if (isOpen) {
-                button.setAttribute('aria-expanded', 'false');
-                content.classList.remove('active');
-                content.style.maxHeight = '0px';
-                icon.textContent = '+';
-            } else {
-                button.setAttribute('aria-expanded', 'true');
-                content.classList.add('active');
+            // Toggle the 'active' class to trigger the CSS slide
+            content.classList.toggle('active');
+
+            // Change the icon from + to - when open
+            if (content.classList.contains('active')) {
                 icon.textContent = '−';
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }
-        });
-
-        // Update expanded project height after a window resize.
-        window.addEventListener('resize', () => {
-            if (button.getAttribute('aria-expanded') === 'true') {
-                content.style.maxHeight =
-                    content.scrollHeight + 'px';
+            } else {
+                icon.textContent = '+';
             }
         });
     });
