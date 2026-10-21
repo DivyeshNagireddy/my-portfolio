@@ -208,17 +208,18 @@ strong {
     font-family: 'Inter', sans-serif;
 }
 
-/* Slide Down Content Wrapper */
+
+/* Slide Down Project Description */
 .project-content {
-    max-height: 0; /* Hidden by default */
-    overflow: hidden; /* Keeps content invisible until expanded */
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* The slide effect */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
 }
 
-/* This class is added by JavaScript when clicked */
 .project-content.active {
-    max-height: 500px; /* Adjust based on how much text you have */
+    max-height: 2000px;
 }
+
 
 .content-inner {
     padding: 0 35px 35px 35px;
