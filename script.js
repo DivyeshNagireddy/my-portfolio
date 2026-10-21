@@ -1,21 +1,31 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.project-btn');
 
     buttons.forEach(button => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.plus-icon');
+
+        if (!content || !content.classList.contains('project-content')) {
+            return;
+        }
+
         button.addEventListener('click', () => {
-            // Find the content div immediately after the button
-            const content = button.nextElementSibling;
-            const icon = button.querySelector('.plus-icon');
+            const isOpen = content.classList.contains('active');
 
-            // Toggle the 'active' class to trigger the CSS slide
-            content.classList.toggle('active');
+            if (isOpen) {
+                content.style.maxHeight = '0px';
+                content.classList.remove('active');
 
-            // Change the icon from + to - when open
-            if (content.classList.contains('active')) {
-                icon.textContent = '−';
+                if (icon) {
+                    icon.textContent = '+';
+                }
             } else {
-                icon.textContent = '+';
+                content.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+
+                if (icon) {
+                    icon.textContent = '−';
+                }
             }
         });
     });
