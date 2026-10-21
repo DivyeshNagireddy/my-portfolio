@@ -95,6 +95,20 @@ h3 {
 }
 
 /* About Me */
+#about .info-card {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+#about .info-card p {
+    font: inherit;
+    color: inherit;
+    line-height: inherit;
+    margin-bottom: 0.75rem;
+}
+
 #about .info-card p:last-child {
     margin-bottom: 0;
 }
@@ -149,10 +163,12 @@ h3 {
     cursor: pointer;
     padding: 1.25rem 1.5rem;
     width: 100%;
+    min-width: 0;
     text-align: left;
     font-family: inherit;
     font-size: 1.1rem;
     font-weight: 600;
+    line-height: 1.5;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -172,16 +188,7 @@ h3 {
     color: #38bdf8;
     font-size: 1.5rem;
     flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.project-btn.active .plus-icon {
-    transform: none;
-}
-
-.project-btn {
-    line-height: 1.5;
-    min-width: 0;
+    transition: color 0.3s ease;
 }
 
 /* Expandable Project Content */
