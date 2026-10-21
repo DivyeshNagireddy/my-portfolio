@@ -1,31 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.project-btn');
+document.addEventListener('DOMContentLoaded', function () {
+    const projectButtons = document.querySelectorAll('.project-btn');
 
-    buttons.forEach(button => {
-        const content = button.nextElementSibling;
-        const icon = button.querySelector('.plus-icon');
+    projectButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.plus-icon');
 
-        if (!content || !content.classList.contains('project-content')) {
-            return;
-        }
+            if (!content || !content.classList.contains('project-content')) {
+                console.error('Project description element not found.');
+                return;
+            }
 
-        button.addEventListener('click', () => {
             const isOpen = content.classList.contains('active');
 
             if (isOpen) {
-                content.style.maxHeight = '0px';
                 content.classList.remove('active');
+                content.style.maxHeight = '0px';
 
-                if (icon) {
-                    icon.textContent = '+';
-                }
+                if (icon) icon.textContent = '+';
             } else {
                 content.classList.add('active');
                 content.style.maxHeight = content.scrollHeight + 'px';
 
-                if (icon) {
-                    icon.textContent = '−';
-                }
+                if (icon) icon.textContent = '−';
             }
         });
     });
